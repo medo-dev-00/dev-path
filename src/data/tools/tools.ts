@@ -1,11 +1,25 @@
-export const tools = [
+import visualStudioCode from "./icons/icons8-visual-studio-code-48.png";
+import github from "./icons/icons8-github-logo-94.png";
+import git from "./icons/icons8-git-48.png";
+import postman from "./icons/icons8-postman-api-64.png";
+import figma from "./icons/icons8-figma-48.png";
+import npm from "./icons/icons8-npm-48.png";
+import docker from "./icons/icons8-docker-48.png";
+import vercel from "./icons/icons8-vercel-50.png";
+import netlify from "./icons/icons8-netlify-48.png";
+import toolsIcon from "./icons/icons8-tools-50.png";
+import react from "./icons/icons8-react-40.png";
+import lighthouse from "./icons/icons8-lighthouse-48.png";
+import speed from "./icons/icons8-speed-50.png";
+
+export const toolsData = [
   {
     name: "Visual Studio Code",
     slug: "visual-studio-code",
     description: "محرر أكواد قوي ومفتوح المصدر من Microsoft",
     category: "Code Editor",
     url: "https://code.visualstudio.com/",
-    icon: "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/visualstudiocode.svg",
+    icon: visualStudioCode,
     tags: ["Editor", "Development", "Microsoft"],
   },
   {
@@ -14,7 +28,7 @@ export const tools = [
     description: "منصة لاستضافة وإدارة مشاريع Git والتعاون عليها",
     category: "Version Control",
     url: "https://github.com/",
-    icon: "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/github.svg",
+    icon: github,
     tags: ["Git", "GitHub", "Open Source"],
   },
   {
@@ -23,7 +37,7 @@ export const tools = [
     description: "نظام التحكم في الإصدارات وتتبع تغييرات المشروع",
     category: "Version Control",
     url: "https://git-scm.com/",
-    icon: "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/git.svg",
+    icon: git,
     tags: ["Git", "Version Control"],
   },
   {
@@ -32,7 +46,7 @@ export const tools = [
     description: "أداة لاختبار وبناء وتوثيق REST APIs",
     category: "API",
     url: "https://www.postman.com/",
-    icon: "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/postman.svg",
+    icon: postman,
     tags: ["API", "REST", "Testing"],
   },
   {
@@ -41,17 +55,8 @@ export const tools = [
     description: "أداة لتصميم واجهات وتجارب المستخدم والتعاون عليها",
     category: "Design",
     url: "https://www.figma.com/",
-    icon: "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/figma.svg",
+    icon: figma,
     tags: ["UI", "UX", "Design"],
-  },
-  {
-    name: "Can I Use",
-    slug: "can-i-use",
-    description: "معرفة دعم خصائص HTML وCSS وJavaScript في المتصفحات",
-    category: "Web Development",
-    url: "https://caniuse.com/",
-    icon: "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/caniuse.svg",
-    tags: ["CSS", "HTML", "Browser"],
   },
   {
     name: "npm",
@@ -59,7 +64,7 @@ export const tools = [
     description: "مدير الحزم الرسمي لمنظومة JavaScript وNode.js",
     category: "Package Manager",
     url: "https://www.npmjs.com/",
-    icon: "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/npm.svg",
+    icon: npm,
     tags: ["JavaScript", "Node.js", "Packages"],
   },
   {
@@ -68,7 +73,7 @@ export const tools = [
     description: "منصة لبناء وتشغيل ونشر التطبيقات باستخدام Containers",
     category: "DevOps",
     url: "https://www.docker.com/",
-    icon: "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/docker.svg",
+    icon: docker,
     tags: ["Docker", "Containers", "DevOps"],
   },
   {
@@ -77,7 +82,7 @@ export const tools = [
     description: "منصة لنشر واستضافة تطبيقات الويب الحديثة",
     category: "Deployment",
     url: "https://vercel.com/",
-    icon: "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/vercel.svg",
+    icon: vercel,
     tags: ["Deployment", "Next.js", "Hosting"],
   },
   {
@@ -86,7 +91,7 @@ export const tools = [
     description: "منصة لنشر واستضافة مواقع وتطبيقات الويب",
     category: "Deployment",
     url: "https://www.netlify.com/",
-    icon: "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/netlify.svg",
+    icon: netlify,
     tags: ["Deployment", "Hosting", "Frontend"],
   },
   {
@@ -95,7 +100,7 @@ export const tools = [
     description: "مجموعة أدوات متكاملة لفحص وتصحيح تطبيقات الويب",
     category: "Development",
     url: "https://developer.chrome.com/docs/devtools/",
-    icon: "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/googlechrome.svg",
+    icon: toolsIcon,
     tags: ["Debugging", "Chrome", "Web Development"],
   },
   {
@@ -104,7 +109,7 @@ export const tools = [
     description: "أداة لفحص وتصحيح تطبيقات React",
     category: "Development",
     url: "https://react.dev/learn/react-developer-tools",
-    icon: "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/react.svg",
+    icon: react,
     tags: ["React", "Debugging", "Development"],
   },
   {
@@ -113,7 +118,7 @@ export const tools = [
     description: "أداة لتحليل أداء وجودة صفحات الويب وتحسينها",
     category: "Performance",
     url: "https://developer.chrome.com/docs/lighthouse/",
-    icon: "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/lighthouse.svg",
+    icon: lighthouse,
     tags: ["SEO", "Performance", "Accessibility"],
   },
   {
@@ -122,16 +127,7 @@ export const tools = [
     description: "تحليل أداء صفحات الويب على الأجهزة المختلفة",
     category: "Performance",
     url: "https://pagespeed.web.dev/",
-    icon: "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/pagespeedinsights.svg",
+    icon: speed,
     tags: ["Performance", "SEO", "Google"],
-  },
-  {
-    name: "Squoosh",
-    slug: "squoosh",
-    description: "أداة لضغط وتحسين الصور وتقليل حجمها",
-    category: "Images",
-    url: "https://squoosh.app/",
-    icon: "https://cdn.simpleicons.org/squoosh/3E4A61",
-    tags: ["Images", "Compression", "Optimization"],
   },
 ];

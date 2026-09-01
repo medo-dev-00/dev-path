@@ -11,12 +11,11 @@ export default function ToolsHeader() {
       transition={{ duration: 0.5, delay: 0.3 }}
       className="mb-10 text-center"
     >
-      <h1 className="text-4xl font-bold">المصادر التعليمية للمطورين</h1>
+      <h1 className="text-4xl font-bold">أدوات المطورين</h1>
 
       <p className="mx-auto mt-4 max-w-3xl text-gray-500">
-        مكتبة شاملة من التوثيقات الرسمية، المقالات، الدروس المرئية، الأدوات
-        والمراجع الموثوقة لدعم رحلتك في تعلم البرمجة وبناء تطبيقات الويب
-        الحديثة.
+        مجموعة من أفضل الأدوات التي يحتاجها المطورون لتطوير المشاريع، كتابة
+        الأكواد، إدارة الإصدارات، اختبار التطبيقات وتحسين سير العمل.
       </p>
     </motion.header>
   );

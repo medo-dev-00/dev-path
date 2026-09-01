@@ -2,7 +2,7 @@
 
 import { FaArrowLeft } from "react-icons/fa";
 import { motion } from "motion/react";
-import { tools } from "@/data/tools/tools";
+import { toolsData } from "@/data/tools/tools";
 import Image from "next/image";
 
 export default function toolCards() {
@@ -19,7 +19,7 @@ export default function toolCards() {
       </motion.h2>
       <section>
         <div className="flex flex-wrap gap-4">
-          {tools.map((tool, index) => (
+          {toolsData.map((tool, index) => (
             <motion.article
               key={index}
               initial={{ opacity: 0, y: 20, scale: 0.95 }}
@@ -42,9 +42,11 @@ export default function toolCards() {
                 <span> فتح المصدر </span>
                 <FaArrowLeft size={13} />
               </a>
-              <ul>
+              <ul className="flex gap-4 mt-4">
                 {tool.tags.map((tag) => (
-                  <li key={tag}>{tag}</li>
+                  <li key={tag} className="px-2 rounded-full bg-blue-400/50">
+                    {tag}
+                  </li>
                 ))}
               </ul>
             </motion.article>
