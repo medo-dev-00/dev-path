@@ -9,6 +9,7 @@ const links = [
   { label: "الرئيسية", href: "/" },
   { label: "المسارات", href: "/roadmaps" },
   { label: "المصادر", href: "/resources" },
+  { label: "أدوات", href: "/tools" },
 ];
 
 export default function NavBar() {
