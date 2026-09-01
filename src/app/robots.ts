@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       disallow: ["/api/", "/admin/"],
     },
 
-    sitemap: "https://your-domain.com/sitemap.xml",
+    sitemap: "https://turn-to-developer.vercel.app/sitemap.xml",
   };
 }

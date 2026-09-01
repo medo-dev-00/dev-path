@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowLeft, Home, Map } from "lucide-react";
+import { Home, Map } from "lucide-react";
 
 export default function NotFound() {
   return (

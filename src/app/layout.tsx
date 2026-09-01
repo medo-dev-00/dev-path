@@ -8,7 +8,7 @@ const ibm = IBM_Plex_Sans_Arabic({
   weight: ["400", "500", "700"],
 });
 export const metadata: Metadata = {
-  metadataBase: new URL("https://your-domain.com"),
+  metadataBase: new URL("https://turn-to-developer.vercel.app"),
 
   title: {
     default: "تحول لمبرمج | مسارات تعلم البرمجة",
