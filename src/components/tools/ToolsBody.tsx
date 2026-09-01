@@ -35,20 +35,23 @@ export default function toolCards() {
               <p className="text-[#5F5E5E] text-[16px] leading-[25.6px] my-2">
                 {tool.description}
               </p>
-              <a
-                href={tool.url}
-                className="w-fit text-[#004AC6] text-[16px] leading-[25.6px] flex items-center gap-2 hover:text-[#004AC6] hover:underline"
-              >
-                <span> فتح المصدر </span>
-                <FaArrowLeft size={13} />
-              </a>
+
               <ul className="flex gap-4 mt-4">
                 {tool.tags.map((tag) => (
-                  <li key={tag} className="px-2 rounded-full bg-blue-400/50">
+                  <li key={tag} className="px-3 rounded-full bg-blue-400/50">
                     {tag}
                   </li>
                 ))}
               </ul>
+              <a
+                href={tool.url}
+                target="_blank"
+                className="w-fit mt-4 text-[#004AC6] text-[16px] leading-[25.6px] flex items-center gap-2
+                 hover:text-[#004AC6] hover:underline"
+              >
+                <span> فتح المصدر </span>
+                <FaArrowLeft size={13} />
+              </a>
             </motion.article>
           ))}
         </div>
