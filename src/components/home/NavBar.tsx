@@ -36,7 +36,7 @@ export default function NavBar() {
                 {isActive && (
                   <motion.div
                     layoutId="active-link"
-                    className="absolute bottom-0 right-0 left-0 h-[2px] bg-[#004AC6]"
+                    className="absolute bottom-0 right-0 left-0 h-0.5 bg-[#004AC6]"
                     transition={{
                       type: "spring",
                       stiffness: 500,

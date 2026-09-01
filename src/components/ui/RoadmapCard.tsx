@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "motion/react";
 import Link from "next/link";
 
 export type RoadmapCardProps = {
@@ -11,11 +14,20 @@ export type RoadmapCardProps = {
   };
 };
 
-export default function RoadmapCard({ roadmap }: RoadmapCardProps) {
+export default function RoadmapCard({
+  roadmap,
+  index,
+}: RoadmapCardProps & { index: number }) {
   const Icon = roadmap.icon;
 
   return (
-    <div className="flex flex-col justify-between rounded-xl border border-slate-300 bg-white p-6">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: index * 0.1 }}
+      viewport={{ amount: 0.3 }}
+      className="flex-1 basis-xs flex flex-col justify-between rounded-xl border border-slate-300 bg-white p-6"
+    >
       <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-blue-100">
         <Icon className="h-6 w-6 text-blue-600" />
       </div>
@@ -38,6 +50,6 @@ export default function RoadmapCard({ roadmap }: RoadmapCardProps) {
       >
         عرض المسار
       </Link>
-    </div>
+    </motion.div>
   );
 }

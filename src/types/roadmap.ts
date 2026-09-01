@@ -21,8 +21,15 @@ export interface RoadmapSection {
   topics: Topic[];
 }
 
+export interface RoadmapSectionWithoutIcon {
+  id: number;
+  title: string;
+  description: string;
+  topics: Topic[];
+}
+
 export interface Project {
-  id: string;
+  id: number;
   title: string;
   url: string;
   stack: string[];
@@ -35,4 +42,13 @@ export interface Roadmap {
   level: string;
   stages: number;
   sections: RoadmapSection[];
+}
+
+export interface RoadmapWithoutIcons {
+  slug: string;
+  title: string;
+  description: string;
+  level: string;
+  stages: number;
+  sections: RoadmapSectionWithoutIcon[];
 }

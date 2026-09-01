@@ -1,11 +1,16 @@
-import { frontendRoadmap } from "@/data/frontend";
-import { fullstackRoadmap } from "@/data/fullstack";
-import RoadmapCard from "./RoadmapCard";
+"use client";
+
+import { frontendRoadmap } from "@/data/roadmaps/frontend";
+import { fullstackRoadmap } from "@/data/roadmaps/fullstack";
+import { mobileRoadmap } from "@/data/roadmaps/mobile";
+import RoadmapCard from "../ui/RoadmapCard";
 
 import { FaReact } from "react-icons/fa";
 import { FaServer } from "react-icons/fa6";
-import { backendRoadmap } from "@/data/backend";
+import { backendRoadmap } from "@/data/roadmaps/backend";
 import { BiServer } from "react-icons/bi";
+import { MdPhoneIphone } from "react-icons/md";
+import { motion } from "motion/react";
 
 export default function Roadmaps() {
   const roadmaps = [
@@ -18,22 +23,32 @@ export default function Roadmaps() {
       icon: FaServer,
     },
     {
+      ...mobileRoadmap,
+      icon: MdPhoneIphone,
+    },
+    {
       ...fullstackRoadmap,
       icon: BiServer,
     },
   ];
   return (
     <section className="mx-auto max-w-7xl px-6 py-16">
-      <header className="mb-10 text-center">
+      <motion.header
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ amount: 0.3 }}
+        transition={{ duration: 0.3, delay: 0.3 }}
+        className="mb-10 text-center"
+      >
         <h1 className="text-4xl font-bold">المسارات التعليمية</h1>
 
         <p className="mt-4 text-gray-500">
           اختر المسار المناسب لهدفك وابدأ رحلة تعلم واضحة ومنظمة.
         </p>
-      </header>
+      </motion.header>
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {roadmaps.map((roadmap) => (
+      <div className="flex gap-4 flex-wrap">
+        {roadmaps.map((roadmap, index) => (
           <RoadmapCard
             key={roadmap.title}
             roadmap={{
@@ -44,6 +59,7 @@ export default function Roadmaps() {
               level: roadmap.level,
               stages: roadmap.stages,
             }}
+            index={index}
           />
         ))}
       </div>

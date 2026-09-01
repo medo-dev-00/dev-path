@@ -1,9 +1,5 @@
-import Roadmaps from "@/components/home/Roadmaps";
+import Roadmaps from "@/components/ui/Roadmaps";
 
 export default function RoadmapsPage() {
-  return (
-    <main dir="rtl" className="min-h-screen bg-[#f8f9fa] px-6">
-      <Roadmaps />
-    </main>
-  );
+  return <Roadmaps />;
 }
