@@ -12,10 +12,6 @@ import {
   Zap,
   Box,
   Settings,
-  BookOpen,
-  ExternalLink,
-  GraduationCap,
-  PlayCircle,
 } from "lucide-react";
 
 type IconMap = {
