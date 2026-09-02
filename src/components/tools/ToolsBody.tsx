@@ -15,7 +15,7 @@ export default function toolCards() {
         transition={{ duration: 0.3, delay: 0.1 }}
         className="text-[32px] leading-[41.6px] font-semibold border-b border-b-[#C3C6D7] mb-8 pb-2 "
       >
-        مصادر مختارة
+        أهم ادوات المطوريين
       </motion.h2>
       <section>
         <div className="flex flex-wrap gap-4">

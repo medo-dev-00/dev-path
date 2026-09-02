@@ -1,6 +1,6 @@
 "use client";
 
-import { whyLearnItems } from "@/data/home/why-learn";
+import { fetures } from "@/data/home/fetures";
 import { motion } from "motion/react";
 
 export default function WhyLearn() {
@@ -14,11 +14,11 @@ export default function WhyLearn() {
           transition={{ duration: 0.5 }}
           className="mb-12 text-center text-3xl font-bold md:text-4xl"
         >
-          لماذا تتعلم معنا؟
+          المميزات{" "}
         </motion.h2>
 
         <div className="flex justify-between gap-10 flex-wrap">
-          {whyLearnItems.map((item, index) => {
+          {fetures.map((item, index) => {
             const Icon = item.icon;
 
             return (

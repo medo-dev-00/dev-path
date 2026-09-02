@@ -3,7 +3,6 @@
 import { motion } from "motion/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FaSearch } from "react-icons/fa";
 
 const links = [
   { label: "الرئيسية", href: "/" },
@@ -15,8 +14,11 @@ const links = [
 export default function NavBar() {
   const pathname = usePathname();
   return (
-    <nav className="flex gap-20 items-center p-4 max-w-400 mx-auto px-4">
-      <Link href={"/"} className="text-[#004AC6] text-[24px] font-semibold">
+    <nav className="flex gap-x-20 items-center p-4 max-w-400 mx-auto px-4 max-sm:flex-col">
+      <Link
+        href={"/"}
+        className="text-[#004AC6] text-[24px] font-semibold text-nowrap"
+      >
         تحول لمبرمج
       </Link>
 

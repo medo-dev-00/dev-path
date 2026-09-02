@@ -27,25 +27,19 @@ export default function ResourceCards() {
         مصادر مختارة
       </motion.h2>
       <section>
-        <ul className="flex flex-wrap gap-4 items-center mb-8">
-          <li
-            onClick={() => setActive("All")}
-            className={`text-nowrap text-black px-4 py-1 rounded-md bg-blue-100 border cursor-pointer
-               border-blue-600 ${active === "All" && "bg-blue-600 text-white"}`}
-          >
-            All
-          </li>
+        <select
+          onChange={(event) => setActive(event.target.value)}
+          className="block w-full px-3 py-2.5 bg-neutral-secondary-medium 
+          border border-blue-600 text-heading text-sm rounded-base rounded-lg mb-8 
+          focus:ring-brand focus:border-brand shadow-xs placeholder:text-body"
+        >
+          <option value={"All"}>All</option>
           {resourceCategories.slice(1).map((one) => (
-            <li
-              key={one}
-              onClick={() => setActive(one)}
-              className={`text-nowrap text-black px-4 py-1 rounded-md bg-blue-100 border cursor-pointer
-                 border-blue-400 ${active === one && "bg-blue-600 text-white"}`}
-            >
+            <option value={one} key={one}>
               {one}
-            </li>
+            </option>
           ))}
-        </ul>
+        </select>
         <div className="flex flex-wrap gap-4">
           {renderedResources.map((resource, index) => (
             <motion.article
@@ -64,6 +58,7 @@ export default function ResourceCards() {
                 {resource.description}
               </p>
               <a
+                target="_blank"
                 href={resource.url}
                 className="w-fit text-[#004AC6] text-[16px] leading-[25.6px] flex items-center gap-2 hover:text-[#004AC6] hover:underline"
               >

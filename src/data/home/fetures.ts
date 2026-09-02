@@ -1,6 +1,6 @@
 import { FaRoute, FaBookOpen, FaCode } from "react-icons/fa";
 
-export const whyLearnItems = [
+export const fetures = [
   {
     title: "مسارات واضحة",
     description:
